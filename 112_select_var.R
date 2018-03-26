@@ -1,43 +1,43 @@
 library(dplyr)
 
 # Benin
-wm.ben.b <- select(wm.ben.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.ben.b <- select(wm.ben.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # Cameroon
-wm.cam.b <- select(wm.cam.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.cam.b <- select(wm.cam.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # Central African Republic
-wm.car.b <- select(wm.car.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.car.b <- select(wm.car.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, WMWEIGHT)
 
 # Chad
-wm.cha.b <- select(wm.cha.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.cha.b <- select(wm.cha.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # Democratic Republic of the Congo
-wm.drc.b <- select(wm.drc.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.drc.b <- select(wm.drc.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # Ghana
-wm.gha.b <- select(wm.gha.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.gha.b <- select(wm.gha.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # Guinea Bissau
-wm.gub.b <- select(wm.gub.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.gub.b <- select(wm.gub.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # Mali
-wm.mal.b <- select(wm.mal.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.mal.b <- select(wm.mal.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # Mauritania
-wm.mau.b <- select(wm.mau.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, WB1M, WB1Y, WB2, WB3, WB4, wscore)
+wm.mau.b <- select(wm.mau.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, WB1M, WB1Y, WB2, WB3, WB4, wscore, WMWEIGHT)
 
 # Nigeria
-wm.nia.b <- select(wm.nia.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.nia.b <- select(wm.nia.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # Sierra Leone
-wm.sle.b <- select(wm.sle.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.sle.b <- select(wm.sle.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # São Tomé and Príncipe
-wm.stp.b <- select(wm.stp.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.stp.b <- select(wm.stp.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, WMWEIGHT)
 
 # Togo
-wm.tog.b <- select(wm.tog.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore)
+wm.tog.b <- select(wm.tog.a, country, round, HH1, HH2, HH6, HH7, LN, CM1, CM2M, CM2Y, CEB, CSURV, CDEAD, DV1A, DV1B, DV1C, DV1D, DV1E, FG3, FG7, MA1, MA2, MA3, MA6, MA8M, MA8Y, MA9, SB1, SB2, WB1M, WB1Y, WB2, WB3, WB4, windex5, wscore, wmweight)
 
 # Check number of observations
 nrow(wm.ben.a) == nrow(wm.ben.b)

@@ -1,45 +1,42 @@
 library(tidyverse)
 library(lubridate)
-library(tidyr)
-library(stringr)
-library(magrittr)
 
-# wm.13 <- read_csv("Data_raw/wm_merged.csv")
+wm.13 <- read_csv("Data_raw/wm_merged.csv")
 
 # Wedding date
-sort(unique(wm.13$MA8M))
+sort(unique(wm.13$MA8M), na.last = FALSE)
 wm.13$MA8M <- gsub(97, NA, wm.13$MA8M)
 wm.13$MA8M <- gsub(98, NA, wm.13$MA8M)
 wm.13$MA8M <- gsub(99, NA, wm.13$MA8M)
 wm.13$MA8M <- as.integer(wm.13$MA8M)
 
-sort(unique(wm.13$MA8Y))
+sort(unique(wm.13$MA8Y), na.last = FALSE)
 wm.13$MA8Y <- gsub(9997, NA, wm.13$MA8Y)
 wm.13$MA8Y <- gsub(9998, NA, wm.13$MA8Y)
 wm.13$MA8Y <- gsub(9999, NA, wm.13$MA8Y)
 wm.13$MA8Y <- as.integer(wm.13$MA8Y)
 
 # Childbirth
-sort(unique(wm.13$CM2M))
+sort(unique(wm.13$CM2M), na.last = FALSE)
 wm.13$CM2M <- gsub(97, NA, wm.13$CM2M)
 wm.13$CM2M <- gsub(98, NA, wm.13$CM2M)
 wm.13$CM2M <- gsub(99, NA, wm.13$CM2M)
 wm.13$CM2M <- as.integer(wm.13$CM2M)
 
-sort(unique(wm.13$CM2Y))
+sort(unique(wm.13$CM2Y), na.last = FALSE)
 wm.13$CM2Y <- gsub(9997, NA, wm.13$CM2Y)
 wm.13$CM2Y <- gsub(9998, NA, wm.13$CM2Y)
 wm.13$CM2Y <- gsub(9999, NA, wm.13$CM2Y)
 wm.13$CM2Y <- as.integer(wm.13$CM2Y)
 
 # Woman's date of birth
-sort(unique(wm.13$WB1M))
+sort(unique(wm.13$WB1M), na.last = FALSE)
 wm.13$WB1M <- gsub(97, NA, wm.13$WB1M)
 wm.13$WB1M <- gsub(98, NA, wm.13$WB1M)
 wm.13$WB1M <- gsub(99, NA, wm.13$WB1M)
 wm.13$WB1M <- as.integer(wm.13$WB1M)
 
-sort(unique(wm.13$WB1Y))
+sort(unique(wm.13$WB1Y), na.last = FALSE)
 wm.13$WB1Y <- gsub(9997, NA, wm.13$WB1Y)
 wm.13$WB1Y <- gsub(9998, NA, wm.13$WB1Y)
 wm.13$WB1Y <- gsub(9999, NA, wm.13$WB1Y)
@@ -85,12 +82,12 @@ age.first.deliv <- wm.13$CM2 - wm.13$WB1
 wm.13 <- mutate(wm.13, age.first.deliv)
 wm.13$age.first.deliv <- time_length(wm.13$age.first.deliv, "year")
 
-# Time difference between wedding and first childbirth
+# Time difference between first union and first childbirth
 td.wed.child <- wm.13$CM2 - wm.13$MA8
 wm.13 <- mutate(wm.13, td.wed.child)
-wm.13$td.wed.child <- time_length(wm.13$td.wed.child, "days")
+wm.13$td.wed.child <- time_length(wm.13$td.wed.child, "months")
 
-remove(age.first.deliv, td.wed.child, age.first.union)
+remove(td.wed.child, age.first.deliv)
 
 
 write.csv(wm.13, "Data_raw/wm.13_with dates.csv")

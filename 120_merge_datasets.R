@@ -1,6 +1,14 @@
 library(tidyverse)
 library(readr)
 
+# Rename WMWEIGHT variable
+wm.car.b <- rename(wm.car.b,
+                   wmweight = WMWEIGHT)
+wm.mau.b <- rename(wm.mau.b,
+                   wmweight = WMWEIGHT)
+wm.stp.b <- rename(wm.stp.b,
+                   wmweight = WMWEIGHT)
+
 # Merge the individual wm objects into a unique tibble
 
 # Merge Benin and Cameroon

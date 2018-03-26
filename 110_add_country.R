@@ -69,7 +69,7 @@ wm.sle.a <- wm.sle.a %>%
   select(country, everything())
 
 # São Tomé and Príncipe
-country <- rep("São Tomé and Príncipe", nrow(wm.stp.a))
+country <- rep("Sao Tome and Principe", nrow(wm.stp.a))
 wm.stp.a <- mutate(wm.stp.a, country)
 wm.stp.a <- wm.stp.a %>%
   select(country, everything())
